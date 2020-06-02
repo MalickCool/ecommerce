@@ -1,0 +1,11 @@
+export const GET_ERRORS = "GET_ERRORS";
+export const USER_LOADING = "USER_LOADING";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_TO_CART = "REMOVE_TO_CART";
+
+export const INCREMENT_CART_ITEM = "INCREMENT_CART_ITEM";
+export const DECREMENT_CART_ITEM = "DECREMENT_CART_ITEM";
+
+export const RESET_CART = "RESET_CART";

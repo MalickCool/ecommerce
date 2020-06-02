@@ -1,0 +1,30 @@
+{
+  "name": "malickshop",
+  "version": "1.0.0",
+  "description": "Boutique en ligne developpée avec MERN par Malick Coulibaly lors du Confinement relatif à la pandemie COVID-19",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix ecommerce",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "ecommerce": "npm start --prefix ecommerce",
+    "dev": "concurrently \"npm run server\" \"npm run ecommerce\""
+  },
+  "author": "Malick Coulibaly",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
