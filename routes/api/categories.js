@@ -11,9 +11,6 @@ router.post("/ajouter" , (req, res) => {
     if(isValid){
         //return res.status(404).json(errors);
     }
-
-    //console.log(req);
-
     Categories.findOne({ libelle: req.body.libelle }).then(categorie => {
         //console.log(req);
         if(categorie){

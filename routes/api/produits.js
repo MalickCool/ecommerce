@@ -9,13 +9,9 @@ const Categories = require("../../models/Categories");
 router.post("/ajouter" , (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
 
-    //console.log(errors);
-    
     if(!isValid){
         return res.status(404).json(errors);
     }
-
-    //console.log(req);
 
     Produit.findOne({ designation: req.body.designation }).then(produit => {
         //console.log(req);
@@ -35,7 +31,7 @@ router.post("/ajouter" , (req, res) => {
         
                     newProduit
                         .save()
-                        .then(produit => res.json(Produit))
+                        .then(produit => res.json(produit))
                         .catch(err => console.log(err));
                 }else{
                     return res.status(400).json({ libelle: "Cette Catégorie n'existe pas"});
@@ -44,7 +40,6 @@ router.post("/ajouter" , (req, res) => {
         }
     });
 });
-
 router.all("/all", (req, res) => {
 
     Produit.find({}).then(Produits => {
@@ -52,23 +47,16 @@ router.all("/all", (req, res) => {
     })
 
 });
-
 router.get("/get", (req, res) => {
-
     Produit.findById(req.query.id).then(produits => {
         res.send(produits);
     })
-
 });
 
 router.get("/getProducts", (req, res) => {
-
-    //console.log(req);
-
     Produit.find({ 'categorie_id': req.query.id}).then(produits => {
         res.send(produits);
     })
-
 });
 
 module.exports = router;
