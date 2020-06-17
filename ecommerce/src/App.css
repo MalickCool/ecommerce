@@ -811,6 +811,11 @@ h1 {
   overflow: hidden;
 }
 
+.product-link:hover {
+  text-decoration: none !important;
+  color: #4fbfa8 !important;
+}
+
 #content .text h3 a {
   color: #555;
 }
@@ -3046,4 +3051,9 @@ code {
   text-align: center;
   letter-spacing: -1px;
   text-indent: -1px;
+}
+
+.nav-link.active a, .nav-link.active a:hover{
+    color: #fff !important;
+    background: transparent !important;
 }

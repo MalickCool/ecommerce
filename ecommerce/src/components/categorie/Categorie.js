@@ -30,7 +30,6 @@ class Categorie extends Component {
             .then(
                 res => {
                     this.setState( {produits: res.data } );
-                    //console.log(res)
                 }
             )
             .catch(err => console.log(err));

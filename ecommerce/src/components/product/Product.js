@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { addToCart, incrementCartItem } from '../../actions/cartActions'
 
 import { withRouter } from "react-router-dom";
+
+import { Link } from 'react-router-dom'
 import { connect } from "react-redux";
 import { format } from '../../others/cart'
 
@@ -41,20 +43,38 @@ class Product extends Component {
         this.props.incrementCartItem(itemInCart);
     }
 
+    openProductPage = e => {
+        const { produits } = this.state;
+        
+        console.log(produits._id)
+    }
+
     render() {
         return (
             <div className="col-md-3 mb-5">	
-                <div className="front">
-                    <img src={this.props.prod.image} alt="" className="img-fluid" />
-                </div>
-                <div className="text">
-                    <h3>
-                        {this.props.prod.designation}
-                    </h3>
-                    <p className="price"> 
-                        <del></del>{format(this.props.prod.prix)} FCFA
-                    </p>
-                </div>
+
+                <Link
+                    to={{
+                        pathname: '/product',
+                        state: {
+                            idProduct: this.props.prod._id
+                        }
+                    }}
+                    className="product-link"
+                >
+                    <div className="front">
+                        <img src={this.props.prod.image} alt="" className="img-fluid" />
+                    </div>
+                    <div className="text">
+                        <h3>
+                            {this.props.prod.designation}
+                        </h3>
+                        <p className="price"> 
+                            <del></del>{format(this.props.prod.prix)} FCFA
+                        </p>
+                    </div>
+                </Link>
+                
                 <div className="add-cart text-center">
                     <a className="btn btn-success w-100" onClick={this.addToBasket}>
                         <i className="fa fa-shopping-cart"></i> Ajouter au Panier

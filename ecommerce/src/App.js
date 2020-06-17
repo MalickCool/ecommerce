@@ -7,8 +7,7 @@ import store from './store'
 import './App.css';
 import Subnav from './components/subnav/Subnav';
 import Navbar from './components/navbar/Navbar';
-//import Container from './components/product/Container';
-//import Product from './components/product/Product';
+import Container from './components/product/Container';
 import Footer from './components/footer/Footer';
 import Connexion from './components/connections/Connexion';
 import Inscription from './components/connections/Inscription';
@@ -58,6 +57,8 @@ function App() {
               <Route exact path="/categorie" component={Categorie} />
               <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/commande" component={Commande} />
+              <Route exact path="/product" component={Container} />
+
 
             </Router>
           
