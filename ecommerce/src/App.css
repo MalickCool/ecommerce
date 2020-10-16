@@ -3047,3 +3047,7 @@ code {
   letter-spacing: -1px;
   text-indent: -1px;
 }
+
+.logoSmall{
+  height: 70px;
+}

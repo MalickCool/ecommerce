@@ -21,7 +21,7 @@ class Subnav extends Component {
                 <div className="col-lg-6 text-center text-lg-right">
                   <ul className="menu list-inline mb-0">
                     
-                    {this.props.auth.isAuthenticated ?(
+                    {this.props.auth.isAuthenticated ?(  
                       <LoginUserSubnav />
                     ) : (
                       <NotLoginUserSubnav />

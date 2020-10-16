@@ -8,17 +8,11 @@ class LoginUserSubnav extends Component {
             <React.Fragment>
 
                 <li className="list-inline-item dropdown">
-                    <Link
-                        to="/categorie"
-                        className="nav-link dropdown-toggle"
-                        id="navbarDropdown" 
-                        role="button" 
-                        data-toggle="dropdown" 
-                        aria-haspopup="true" 
-                        aria-expanded="false"
-                    >
-                        Bonjour, { this.props.auth.user.name.toUpperCase() }
-                    </Link>
+                   
+
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="nav-link dropdown-toggle" id="navbarDropdown">
+                    Bonjour, { this.props.auth.user.name.toUpperCase() }
+                    </a>
                     
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <Link

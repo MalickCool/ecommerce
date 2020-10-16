@@ -47,11 +47,16 @@ class Navbar extends Component {
         return (
             <nav className="navbar navbar-expand-lg">
 				<div className="container">
-					<a href="index.html" className="navbar-brand home">
-						<img src="img/logo.png" alt="Obaju logo" className="d-none d-md-inline-block" />
-						<img src="img/logo-small.png" alt="Obaju logo" className="d-inline-block d-md-none" />
-						<span className="sr-only">Obaju - go to homepage</span>
-					</a>
+
+                    <Link
+                        to='/dashboard'
+                        className="navbar-brand home"
+                    >
+                        <img src="logo.png" alt="Malick Shop Logo" className="logoSmall d-none d-md-inline-block" />
+                        <img src="img/logo-small.png" alt="Malick Shop Logo" className="d-inline-block d-md-none" />
+						<span className="sr-only"></span>
+                    </Link>
+
                     <div className="navbar-buttons">
 
                         <button type="button" data-toggle="collapse" data-target="#navigation" className="btn btn-outline-secondary navbar-toggler">
